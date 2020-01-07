@@ -1,0 +1,37 @@
+current directory: /home/sruiz/workspace/ruby/rails_projects/alpha-blog/vendor/bundle/ruby/2.5.0/gems/puma-3.12.1/ext/puma_http11
+/usr/bin/ruby -r ./siteconf20190813-5249-mrq5oo.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+creating Makefile
+
+current directory: /home/sruiz/workspace/ruby/rails_projects/alpha-blog/vendor/bundle/ruby/2.5.0/gems/puma-3.12.1/ext/puma_http11
+make "DESTDIR=" clean
+rm -f 
+rm -f puma_http11.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /home/sruiz/workspace/ruby/rails_projects/alpha-blog/vendor/bundle/ruby/2.5.0/gems/puma-3.12.1/ext/puma_http11
+make "DESTDIR="
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_OPENSSL_BIO_H    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o http11_parser.o -c http11_parser.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_OPENSSL_BIO_H    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o io_buffer.o -c io_buffer.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_OPENSSL_BIO_H    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o mini_ssl.o -c mini_ssl.c
+mini_ssl.c: In function ‘engine_init_client’:
+mini_ssl.c:220:3: warning: ‘DTLSv1_method’ is deprecated [-Wdeprecated-declarations]
+   conn->ctx = SSL_CTX_new(DTLSv1_method());
+   ^~~~
+In file included from /usr/include/openssl/opensslconf.h:42,
+                 from /usr/include/openssl/e_os2.h:13,
+                 from /usr/include/openssl/bio.h:13,
+                 from mini_ssl.c:14:
+/usr/include/openssl/ssl.h:1900:1: note: declared here
+ DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_method(void)) /* DTLSv1.0 */
+ ^~~~~~~~~~~~~~~~~~
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_OPENSSL_BIO_H    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o puma_http11.o -c puma_http11.c
+rm -f puma_http11.so
+gcc -shared -o puma_http11.so http11_parser.o io_buffer.o mini_ssl.o puma_http11.o -L. -L/usr/lib64 -L. -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector -rdynamic -Wl,-export-dynamic -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -m64  -m64  -lruby -lssl -lcrypto    -lc
+
+current directory: /home/sruiz/workspace/ruby/rails_projects/alpha-blog/vendor/bundle/ruby/2.5.0/gems/puma-3.12.1/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/mkdir -p . ./.gem.20190813-5249-17zmoye/puma
+exit > .sitearchdir.-.puma.time
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20190813-5249-17zmoye/puma
