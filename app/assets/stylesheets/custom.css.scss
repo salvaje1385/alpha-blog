@@ -24,7 +24,7 @@ $navbar-default-bg: black;
 .jumbotron {
 	background-image: asset-url('beach_palm_trees.jpg');
 	background-size: cover;
-	height: 739px;
+	height: 710px;
 }
 
 .jumbotron h1 {
@@ -38,4 +38,29 @@ $navbar-default-bg: black;
 .btn-xlarge {
 	font-size: 1.7em;
 	background-color: black;
+}
+
+.footer {
+	margin: 45px 13px 0 10px;
+	padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	color: #777;
+}
+
+.footer a:hover {
+	color: #222;
+}
+
+.footer small {
+	float: left;
+}
+
+.footer ul {
+	float: right;
+	list-style: none;
+}
+
+.footer ul li {
+	float: left;
+	margin-left: 15px;
 }
