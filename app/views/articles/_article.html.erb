@@ -8,7 +8,9 @@
         <div class="article-body">
           <%= truncate(article.description, length: 30) %>
         </div>
-        by <%= article.user.username if article.user %>
+        <% if article.user %>
+          by <%= link_to article.user.username, user_path(article.user) %>
+        <% end %>
         <div class="article-actions">
           <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
           <%= link_to "Delete this article", article_path(article), method: :delete,

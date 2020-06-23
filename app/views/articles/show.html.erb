@@ -4,6 +4,7 @@
 	<hr>
 	<%= simple_format(@article.description) %>
 	by <%= @article.user.username if @article.user %>
+	<%= link_to gravatar_for(@article.user), user_path(@article.user) %>
 	<div class="article-actions">
 		<%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
 		<%= link_to "Delete this article", article_path(@article), method: :delete,
